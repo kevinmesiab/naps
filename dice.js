@@ -12,9 +12,15 @@
  */
 function Die(die_faces) {
     
-    const MINIMUM_DICE_SIDES = 2;
+    const MINIMUM_FACES = 2; // flip a coin?
     
-
+    
+    // Defensive check for supplied faces parameter
+    if( dice_faces.length < MINIMUM_FACES ) {
+        throw new Error('There must be at least {MINIMUM_FACES}' );
+    }
+    
+    
     /**
      * 
      * The values for each face of the die.  This value must be equal
