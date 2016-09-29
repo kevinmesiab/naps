@@ -118,7 +118,6 @@ function Die(die_faces) {
     
         
     /**
-     * Takes a number and returns its square value
      *
      * @param {number} num - The number for squaring
      * @return the total number of rolls this die has
