@@ -1,5 +1,4 @@
 /* eslint-env node */
-
 /**
  * 
  * A Die represents a single physical 2 or 3 dimensional polygon
@@ -106,7 +105,7 @@ function Die(die_faces) {
      */
     var setFirstFace = function( face ) {
         if( first_face === undefined ) {
-            first_face == face;
+            first_face = face;
         }
     };
      
@@ -146,7 +145,7 @@ function Die(die_faces) {
         rolls++;
         
         // Non blocking callback with defensive check
-        if( callback && typeof callback == 'function' ) {
+        if( callback && typeof callback === 'function' ) {
             var tid = setTimeout( 
                 
                 function(die){
